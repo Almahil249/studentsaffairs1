@@ -1,0 +1,23 @@
+{% extends "master.html" %}
+
+{% load static %}
+
+{% block title %}
+Related Websites
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'CSS/Related-Websites.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="div1">
+    <form>
+        <h2>Related Websites</h2>
+        <input type="button" id="button 1" value="Human Resources" onclick = "location.href ='Related-Websites.html'">
+        <input type="button" id="button 1" value="Student Affairs" onclick = "location.href ='Home.html'">
+        <input type="button" id="button 1" value="Higher Studies" onclick = "location.href ='Related-Websites.html'">
+        <input type="button" id="button 1" value="Laboratory Tracking" onclick = "location.href ='Related-Websites.html'">
+    </form>   
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "master.html" %}
+{% load static %}
+
+{% block title %}
+  Department Assignment
+{% endblock %}
+
+{% block style %}
+  <link rel="stylesheet" href="{% static 'CSS/assign-department.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="div1">
+    <form id="DeptAsign" method="post" action="{% url 'update_department' %}" onsubmit="checkForBlank()">
+      {% csrf_token %}
+      <label for="id">Student ID:</label>
+      <input type="text" id="id" name="id" value="{{ request.GET.id }}">
+      <input type="button" id="button1" value="Search" onclick="fetchStudentData()"><br><br>
+      <label for="name">Student Name:</label>
+      <input type="text" id="name" name="name" disabled><br><br>
+      <label for="level">Level:</label>
+      <input type="text" id="level" name="level" disabled><br><br>
+      <label for="department">Select Department:</label>
+      <select id="department" name="department" disabled>
+        <option value="GR">GR: General</option>
+        <option value="CS">CS: Computer Science</option>
+        <option value="AI">AI: Artificial Intelligence</option>
+        <option value="IT">IT: Information Technology</option>
+        <option value="IS">IS: Information System</option>
+        <option value="DS">DS: Decision Support</option>
+      </select><br><br>
+      <input type="submit" value="Assign Department">
+    </form>
+  </div>
+{% endblock %}
+
+{% block script %}
+  <script src="{% static 'JS/Check.js' %}"></script>
+  <script src="{% static 'JS/department-assignment.js' %}"></script>
+{% endblock %}

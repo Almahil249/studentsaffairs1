@@ -1,0 +1,80 @@
+{% extends "master.html" %}
+
+{% load static %}
+
+{% block title %}
+Add new Student
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'CSS\add-student.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="div1">
+    <form method="post" action="{% url 'add_student' %}" onsubmit="checkForBlank()">
+      {% csrf_token %}
+        <h2>Add Student Information</h2>
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id">
+      
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+      
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" >
+      
+        <label for="gpa">GPA:</label>
+        <input type="number" step="0.01" id="gpa" name="gpa" min="0.0" max="4.0">
+              
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      
+        <label for="level">Level:</label>
+        <select id="level" name="level">
+            <option value="first">First Level - 1</option>
+            <option value="second">Second Level - 2</option>
+            <option value="third">Third Level - 3</option>
+            <option value="fourth">Fourth level - 4</option>
+        </select>
+      
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+      
+        <label for="department">Select Department:</label>
+        <select id="department" name="department" disabled >
+            <option value="GR">GR: Genral</option>
+            <option value="CS">CS: Computer Science</option>
+            <option value="AI">AI: Artificial Intelligence</option>
+            <option value="IT">IT: Information Technology</option>
+            <option value="IS">IS: Information System</option>
+            <option value="DS">DS: Decision Support</option>
+        </select><br><br>
+
+   
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+      
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile">
+        
+        <input type="submit" value="Add Student">
+
+      </form>
+      
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'JS/add_student.js' %}"></script>
+<script src="{% static 'JS/Check.js' %}"></script>
+{% endblock %}
+
+

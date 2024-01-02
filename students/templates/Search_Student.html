@@ -1,0 +1,26 @@
+{% extends "master.html" %}
+{% load static %}
+
+{% block title %}
+  Search Students
+{% endblock %}
+
+{% block style %}
+  <link rel="stylesheet" href="{% static 'CSS/search-students.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="div1">
+    <h2>Search for Active Students</h2><br>
+    <section>
+      <label for="searchName">Enter Name:</label>
+      <input type="text" id="searchName" name="searchName">
+      <div id="activeStudentsTable"></div>
+      <button type="button" onclick="fetchAndRenderActiveStudents()">Search</button>
+    </section>
+  </div>
+{% endblock %}
+
+{% block script %}
+  <script src="{% static 'JS/search-student.js' %}"></script>
+{% endblock %}

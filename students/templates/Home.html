@@ -1,0 +1,43 @@
+{% extends "master.html" %}
+{% load static %}
+
+
+{% block title %}
+Student Affairs Website
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'CSS/Home.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="div1">
+            
+    <div class="post-content">
+        <p style="text-align: justify;">
+           <span style="font-size: 18pt; font-family: tahoma, arial, helvetica, sans-serif;">
+               الرسالة: تحقيق مستوى أكاديمي راقي لتخريج جيل متميز، علمياً ومهنياً وأخلاقياً، قادر على التعلم المستمر ومواكبة التطورالدولي، والإسهام بشكل فعال في تحقيق التنمية المستدامة في مصر
+           </span>
+       </p> 
+   </div>
+
+    <div class="post-content">
+        <p style="text-align: justify;">
+           <span style="font-size: 18pt; font-family: tahoma, arial, helvetica, sans-serif;">
+            الرؤية: التميز والريادة في التعليم التقني والتكنلوجي محلياً وإقليمياً ودولياً لإثراء حياة الأفراد، والمجتمع، والبيئة المحيطة                   </span>
+       </p> 
+   </div>
+
+   {% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <script>alert("{{ message }}");</script>
+    {% endfor %}
+  </ul>
+{% endif %}
+</div>
+
+
+{% endblock %}
+
+

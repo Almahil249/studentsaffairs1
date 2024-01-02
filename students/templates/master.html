@@ -1,0 +1,65 @@
+{% load static %}
+<html lang="en">
+    <!DOCTYPE html/>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{% block title %}{% endblock %}</title>
+        {% block style %}{% endblock %}
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'Media\logo1.jpg' %}">
+
+    </head>      
+     
+    <body>
+        <nav>
+            <img class="logo" src="{% static 'Media\logo1.jpg' %}">
+            <ul class="nav">
+                <li class="nav_li"><a href="Related-Websites.html">Related Websites</a></li>
+                <li class="nav_li"><a href="Home.html">Home</a></li>
+                <li class="nav_li"><a href="Add_Student.html">Add Student</a></li>
+                <li class="nav_li"><a href="Update_Student_Info.html">Update Student Info</a></li>
+                <li class="nav_li"><a href="Search_Student.html">Search Students</a></li>
+                <li class="nav_li"><a href="Department_Assignment.html">Department Assignment</a></li>
+                <li class="nav_li"><a href="View_Students.html">View Students</a></li>
+            </ul>
+        </nav>
+ 
+        
+        {% block content %}
+
+        {% endblock %}
+
+
+        <footer>
+            <div class="container>">
+                <div class="row">
+                    <div class="footer_col">
+                        <h4>Menu Links</h4>
+                        <ul class="ul3">
+                            <li class="footer_li"><a href="Related-Websites.html">projects</a></li>
+                            <li class="footer_li"><a href="Home.html">Home</a></li>
+                            <li class="footer_li"><a href="Add_Student.html">Add Student</a></li>
+                            <li class="footer_li"><a href="Update_Student_Info.html">Update Student Info</a></li>
+                            <li class="footer_li"><a href="Search_Student.html">Search Students</a></li>
+                            <li class="footer_li"><a href="Department_Assignment.html">Department Assignment</a></li>
+                            <li class="footer_li"><a href="View_Students.html">View Students</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="footer_col">
+                        <h4>Information</h4>
+                        <ul class="ul3">
+                            <li class="footer_li"><a href="#">About us</a></li>
+                            <li class="footer_li"><a href="#">Privacy & Policy</a></li>
+                            <li class="footer_li"><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+             
+                </div>
+            </div>
+        </footer>
+        {% block script %}
+        {% endblock %}
+    </body>
+</html>
