@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'studentsaffairs.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'masteradmin',
-        'PASSWORD': 'AhmedSahal',
-        'HOST': 'studentsdb.c32o4ccwwyci.eu-north-1.rds.amazonaws.com',
+        'NAME': 'verceldb',
+        'USER': 'default',
+        'PASSWORD': 'LPsZnJw7g0If',
+        'HOST': 'ep-wispy-cell-89913455-pooler.us-east-1.postgres.vercel-storage.com',
         'PORT': '5432'
     }
    
