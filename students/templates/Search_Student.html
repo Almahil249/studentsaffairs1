@@ -10,15 +10,33 @@
 {% endblock %}
 
 {% block content %}
-  <div class="div1">
+<div class="div2">
     <h2>Search for Active Students</h2><br>
-    <section>
-      <label for="searchName">Enter Name:</label>
-      <input type="text" id="searchName" name="searchName">
-      <div id="activeStudentsTable"></div>
-      <button type="button" onclick="fetchAndRenderActiveStudents()">Search</button>
-    </section>
-  </div>
+    <label for="searchName">Enter Name:</label>
+    <input type="text" id="searchName" name="searchName">
+    <button type="button" onclick="fetchAndRenderActiveStudents()">Search</button>
+    <br><br>
+    <div class="div1">
+      <table id="studentsTable">
+        <thead>
+          <tr>
+            <th id='Sid'>ID</th>
+            <th id='Name'>Name</th>
+            <th id='dob' >Date of Birth</th>
+            <th id='gpa' >GPA</th>
+            <th id='gender' >Gender</th>
+            <th id='level' >Level</th>
+            <th id='Sts' >Status</th>
+            <th id='dept' >Department</th>
+            <th id='email' >Email</th>
+            <th id='mobile' >Mobile Number</th>
+            <th id='action' >Action</th>
+          </tr>
+        </thead>
+        <tbody id="TableBody"></tbody>
+      </table>
+    </div>
+</div>
 {% endblock %}
 
 {% block script %}
