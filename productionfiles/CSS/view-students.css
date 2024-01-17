@@ -1,0 +1,83 @@
+table {
+    border-collapse: collapse;
+    width: 95%; 
+    margin-bottom: 20px;
+  }
+  
+
+th, td {
+    border: 1.8px solid #000000;
+    padding: 8px;
+    text-align: left;
+}
+
+td {
+    background-color: #ffffff;
+}
+th {
+    background-color: #868181;
+}
+#Sid {
+    width: 20%;
+}
+#Name {
+    width: 45%;
+}
+#Sts {
+    width: 15%;
+}
+#ChangeSts {
+    width: 20%;
+}
+
+.status-dropdown {
+    width: 80px;
+}
+
+a{
+  
+    color: #ffff;
+    text-decoration:none;
+    font-family: 'Lato', sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    
+}
+
+#btn1{
+    width: 100px;
+    height: 40px;
+    margin: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.div2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 20px;
+    height: auto; 
+    width: 90%; 
+    margin: 20px;
+    border-radius: 15px;
+    background-color: rgba(246, 240, 240, 0.8);
+    color: #1c1a1a;
+  }
+  
+  .div1 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 100%; 
+  }
+
+p{
+    color: #ffffff;
+    margin-left: 5px;
+    margin-right: 5px; ;
+    font-size: 15px;
+}
