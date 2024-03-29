@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^r*noi1@m^^g^*vr5*y@y*%x+tox17_y0mr21!t#7g@^qudv4=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app', 'almahil.com', 'www.almahil.com', 'almahil.com.app', '*.app', '.almahil.app','studentsaffairs.almahil.com','.almahil.com']
+ALLOWED_HOSTS = ['.vercel.app', 'almahil.com.app', '*.app', '.almahil.app','studentsaffairs.almahil.com']
 
 
 # Application definition
