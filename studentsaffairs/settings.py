@@ -78,11 +78,10 @@ WSGI_APPLICATION = 'studentsaffairs.wsgi.application'
 #postgres://studentsdb_sfwz_user:SdpcCNpQkqRncliURwpE88I4AzxIcJUN@dpg-cotltva1hbls73aalgrg-a.oregon-postgres.render.com/studentsdb_sfwz
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
     }
 }
-DATABASES["default"] = dj_database_url.parse("postgres://studentsdb_sfwz_user:SdpcCNpQkqRncliURwpE88I4AzxIcJUN@dpg-cotltva1hbls73aalgrg-a.oregon-postgres.render.com/studentsdb_sfwz")
+DATABASES["default"] = dj_database_url.parse("postgres://default:Etm7pVNx8vlc@ep-soft-sun-a2iw9c89.eu-central-1.aws.neon.tech:5432/verceldb")
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
